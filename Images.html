@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Images</title>
+</head>
+<body>
+    <h1>HTML Images</h1>
+    
+    <h2>Example</h2>
+    <img src="./Images/witcher-3-wild-hunt-kaer-morhen-rosette-wallpaper-2304x864_86.jpg">
+
+    <h2>Attributes</h2>
+    <h3>The <code>alt</code> Attribute</h3>
+    <img src="./Images/witcher-3-wild-hunt-kaer-morhen-rosette-wallpaper-2304x864_86.jpg" alt="witcher3 wild hunt wallpaper">
+
+    <h3>The <code>with</code> and <code>hight</code> attribute</h3>
+    <img src="./Images/witcher-3-wild-hunt-kaer-morhen-rosette-wallpaper-2304x864_86.jpg" alt="witcher3 wild hunt wallpaper" width="450" height="300">
+
+    <h3>The <code>srcset</code> attribute</h3>
+    <img src="./Images/witcher.jpg" srcset="./Images/witcher.jpg, ./Images/witcher2x.jpg, ./Images/witcher3x.jpg">
+    <br>
+    <img src="./Images/witcher2x.jpg">
+
+    <div style="height: 2000px;"></div>
+
+    <h3>The <code>loading</code> attribute</h3>
+    <img src="./Images/diablo2.jpg" alt="diablo2 wallpaper" loading="lazy">
+
+    <h2>The HTML <code>picture</code> element</h2>
+    <picture>
+        <source srcset="./Images/witcher2x.avif" type="image/avif" width="800">
+        <source srcset="./Images/witcher2x.webp" type="image/webp" width="700">
+        <source srcset="./Images/witcher2x.jpg" type="image/jpeg" width="600">
+        <img src="./Images/witcher2x.jpg">
+    </picture>
+    <!-- Burada klasörümde sadece .jpg formatı olduğundan zaten diğer formatlar görüntülenemeyecek eğer diğerleride olsaydı ve tarayıcım bu formatları destekliyor olsaydı önce .avif uzantılı olan yüklenecekti -->
+
+</body>
+</html>
