@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* class selector: başına "." koyulur*/
+        .c1 {
+            padding-left: 16px;
+            border-left: 4px solid green;
+        }
+
+        /*iki classı'da içeren elementlerin seçimi arada boşluk bırakılmaz*/
+        .c2.c3 {
+            padding-left: 16px;
+            border-left: 4px solid green;
+        }
+
+        /*ilk elementin içerisinde olan ikinci elementin seçimi için arada boşluk bırakılır*/
+        .c4 .c5 {
+            border: 1px solid green;
+        }
+        /*id seçimi başına "#" işareti koyularak seçim yapılır. bir id sadece bir etikete verilebilir*/
+        #paragraph {
+            padding-left: 16px;
+            border-left: 4px solid green;
+        }
+        /* element selecor: element etiketiyle seçim*/
+        h2 {
+            padding-left: 16px;
+            border-left: 4px solid purple;
+        }
+        
+        /* Element içerisindeki class seçimi */
+        p.c6 {
+            padding-left: 16px;
+            border-left: 4px solid green;
+        }
+
+        /*Elementin hemen altındaki çocuğunu seçerken ">" işareti kullanılıyor*/
+        p>mark {
+            border: 1px solid green;
+        }
+
+        /*href etiketinin seçiminde "[]" köşeli parantez kullanılıyor. İstenen link bu şekilde seçilebilir*/
+        [href="https://www.patika.dev/"] {
+            padding-left: 16px;
+            border-left: 4px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Selectors</h1>
+    <h2>.class selector</h2>
+    <p class="c1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quo cupiditate incidunt optio beatae fugiat praesentium ex enim sapiente quidem. Alias dolore nulla nisi in.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, recusandae!</p>
+    <h2>.class1.class2</h2> <!-- Hem class1 hem class 2 aynı elementte olmalı.-->  
+    <p class="c2 c3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quo cupiditate incidunt optio beatae fugiat praesentium ex enim sapiente quidem. Alias dolore nulla nisi in.</p>
+    <p class="c2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, recusandae!</p>
+    <h2>.class1 .class2</h2> <!-- .c4 span olarak da seçim yapılabilir .c4 .c5 olarak da seçim yapılabilir-->
+    <p class="c4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. <span class="c5">Quos perferendis cumque</span> nostrum libero quis alias facilis dignissimos suscipit tempore maiores, velit, voluptatem possimus sit rem aspernatur dolor consequuntur iusto modi ex culpa quasi incidunt totam reiciendis. Odit, veritatis sint? Suscipit.</p>
+    <h2>#id Selector</h2>
+    <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis et facere repellat nihil veritatis non ullam ea, earum soluta, rem molestiae vitae aliquid laboriosam reprehenderit praesentium aliquam ipsam necessitatibus illum, tempore sapiente. Possimus, itaque! Voluptatibus mollitia, qui laboriosam vero cumque iusto quam dolor delectus consequuntur, deleniti eum hic aut labore a. Sunt porro, numquam laudantium, corporis aliquam incidunt, aperiam reprehenderit nostrum unde reiciendis neque facilis corrupti? Id optio accusantium perferendis laudantium molestias ipsum aperiam nesciunt omnis eum illum in quibusdam placeat ratione veritatis perspiciatis, odio aut rem. Voluptatem temporibus sunt laudantium impedit culpa labore autem necessitatibus reprehenderit. Nulla, quidem impedit.</p>
+    <h2>element.class</h2> <!--Element içerisinde class seçimi-->
+    <p class="c6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, placeat delectus? Ipsa quae ullam, repellendus quo obcaecati voluptatem neque ducimus consequatur recusandae quia error eveniet. Sint unde eius cumque debitis repudiandae dicta ducimus ut ipsam eveniet numquam rem a reiciendis aliquid similique quod quam quis consequuntur, sequi ullam ex totam! Ut in expedita eaque similique eos optio voluptate. Laboriosam dolorem temporibus cumque nam similique quis alias, harum, cum, aperiam voluptate perferendis aliquid quia obcaecati. Incidunt at ratione obcaecati voluptatibus sed. Itaque praesentium vel cumque reiciendis nesciunt ratione enim commodi doloremque ducimus explicabo. Esse architecto est non provident aspernatur quo ullam!</p>
+    <h2>element>element</h2>
+    <p>Lorem ipsum dolor <mark>sit amet consectetur adipisicing elit.</mark> Nemo similique veritatis minima totam ipsa error voluptate dolorem qui voluptatem soluta.</p>
+    <h2>[attribute="value"]</h2>
+    <p><a href="https://www.patika.dev/" target="_blank">Patika</a></p>
+    <p><a href="https://www.apple.com/" target="_blank">Apple</a></p>
+
+</body>
+</html>

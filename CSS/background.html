@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Background</title>
+    <style>
+        .c1 {
+            background-color: aqua;
+        }
+
+        .c2 {
+            background-color: yellowgreen;
+        }
+
+        .c3 {
+            width: 600px;
+            height: 400px;
+            background-image: url(../Images/witcher.jpg); /* arka plana resim koymak için "url" kullanılıyor*/
+            background-size: cover; /*"100% 100%" şeklide yazılırsa genişlik ve yüksekliği tanımladığımız width ve height değerlerine göre %100 olarak sığdırıyor ancak görüntü bozuluyor. Cover etiketiyle görüntü bozulmuyor eğer görüntünün gerçek boyutu tanımlanan genişlik ve yükseklikten fazlaysa. Fakat bu sefer de görntü tamamen görünmüyor aşağıdan ve sağdan kesiliyor.*/
+            background-repeat: no-repeat; /*Eğer "no-repet" özelliği eklenmezse eklenen görselin 100px 100px genişlik ve yükseklikte olduğunu varsayarsak bu görsel 600 400 genişlik ve yükseklikteki arkaplan alanını tekrar ederek doldurur.*/
+        }
+
+        .c4 {
+            width: 600px;
+            height: 400px;
+            background-image: url(../Images/diablo2.jpg);
+            background-size: 300px 200px; 
+            background-repeat: no-repeat;
+            background-position: center center;
+            border: 1px solid grey;
+            background-attachment: scroll;
+        }
+        
+        /* Shorthand kullanımı backround için */
+        .c5 {
+            width: 600px;
+            height: 400px;
+            background: black url(../Images/diablo2.jpg) no-repeat center center; 
+            background-size: 300px 200px; 
+            border: 1px solid grey;
+            background-attachment: scroll;
+        }
+
+        /* Metin arka planına görsel ekleme css*/
+        .textbg {
+            background: url(../Images/witcher2x.jpg) center bottom;
+            font-size: 128px;
+            font-weight: bold;
+            text-align: center;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-repeat: repeat;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>CSS Background</h1>
+    <h2>background-color</h2>
+    <p class="c1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae numquam quo autem, exercitationem eligendi nostrum ex itaque possimus doloremque voluptas aspernatur, repudiandae dolorem ratione in odit nemo! Quae, commodi dicta.</p>
+    <p class="c2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat animi velit excepturi nisi asperiores, voluptate similique facere vel eius dolor error maiores molestias vitae provident? Aut ipsam dicta qui sit!</p>
+    <h2>background-image</h2>
+    <div class="c3"></div> <br>
+    <div class="c4"></div>
+    <h2>background shorthand</h2>
+    <div class="c5"></div>
+    <h2>Adding an Image to the Background of the Text</h2>
+    <p class="textbg">WITCHER 3</p>
+    
+</body>
+</html>
