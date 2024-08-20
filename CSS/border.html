@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Border</title>
+    <style>
+        .c1 {
+            border-top: 4px solid red;
+            /*border-top-width: 5px;
+            border-top-style: solid;
+            border-top-color: red; eğer shorthand kullanılmazsa her kenar için bu kodları yazmak gerekirdi*/
+            border-right: 4px dashed orange;
+            border-bottom: 4px dotted blueviolet;
+            border-left: 4px double black;
+        }
+        
+        .c2 {
+            border: 2px solid green
+        }
+
+        .c3 {
+            width: 300px;
+            height: 200px;
+            background-color: greenyellow;
+            border-radius: 16px 24px 16px 24px;
+            /*border radius için 4 değer girildiğinde sol üst köşeden başlar saat yönünde devam eder. Yani 1. değer sol üst, 2. değer sağ üst, 3. değer sağ alt ve 4. değer sol alt köşeyi belirtir*/
+        }
+
+        .c4 {
+            width: 300px;
+            height: 200px;
+            background-color: black;
+            border-top-right-radius: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Border</h1>
+    <h2>border</h2>
+    <div class="c1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque iste vero hic exercitationem velit incidunt doloremque officiis enim dicta. A perspiciatis porro sunt debitis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, asperiores illo rem ullam sunt tempora sed!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum officiis dolores autem fuga quibusdam? Magni cum consectetur, ab odit consequatur voluptatibus tenetur, esse animi facere enim atque? Officia quo qui praesentium odit impedit odio quaerat aut laboriosam pariatur blanditiis ut minus facere nostrum ducimus a iure, optio nobis? Asperiores minima architecto amet vitae minus facere sequi placeat, illo qui libero explicabo, aspernatur quam consequuntur aliquam quisquam eius. Obcaecati ab, ducimus porro possimus tenetur ipsa ut dolor, illum dolores eos magnam voluptas repellendus labore similique id corrupti error, amet explicabo quisquam sapiente nemo perspiciatis earum numquam. Ratione sit autem facere excepturi.</p>
+    </div>
+    <h2>border-color</h2>
+    <div class="c2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque iste vero hic exercitationem velit incidunt doloremque officiis enim dicta. A perspiciatis porro sunt debitis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum officiis dolores autem fuga quibusdam? Magni cum consectetur, ab odit consequatur voluptatibus tenetur, esse animi facere enim atque? Officia quo qui praesentium odit impedit odio quaerat aut laboriosam pariatur blanditiis ut minus facere nostrum ducimus a iure, optio nobis? Asperiores minima architecto amet vitae minus facere sequi placeat, illo qui libero explicabo, aspernatur quam consequuntur aliquam quisquam eius. Obcaecati ab, ducimus porro possimus tenetur ipsa ut dolor, illum dolores eos magnam voluptas repellendus labore similique id corrupti error, amet explicabo quisquam sapiente nemo perspiciatis earum numquam. Ratione sit autem facere excepturi.</p>
+    </div>
+    <h2>border-radius</h2>
+    <div class="c3"></div> <br>
+    <div class="c4"></div>
+</body>
+</html>

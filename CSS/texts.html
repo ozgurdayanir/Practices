@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Text Sizing and Alingment</title>
+    <style>
+        body {
+            font-size: 14px;
+            /* Varsayılan font boyutunu belirleme. body etiketi içerisinde bulunan yani sayfanın tamamına bu yazı boyutu etki edecek. Classlara eğer başka size veriliyorsa onlara etki etmez. h1 h2 gibi başlık etiketlerine de etki etmez.*/
+        }
+
+        .c1 {
+            font-size: 18px;
+            /* Metin boyutunu 18 piksel olarak ayarlama */
+            text-transform: capitalize;
+            /* Metinlerin baş harflerini büyük yapma */
+        }
+
+        .c2 {
+            font-size: 1.2em;
+            /* Metin boyutunu 1.2 em olarak ayarlama (1.2 * 16px = 19.2px) */
+            font-style: italic;
+            /* Yazı tipini italic yapma */
+        }
+
+        .c3 {
+            font-size: 200%;
+            /* Metin boyutunu yüzde olarak artırma */
+        }
+
+        .c4 {
+            text-align: center;
+            /* Metni merkezde yatay hizalama */
+            border: 2px solid #FF5733;
+            /* 2 piksel kalınlığında turuncu kenarlık */
+            padding: 10px;
+            /* Kenarlığın içeriye doğru boşluk bırakması */
+        }
+
+        .c5 {
+            border: 2px solid black;
+            padding: 8px;
+            display: block;
+            /* Metni blok element olarak hizalama */
+
+        }
+
+        .c5 p {
+            display: inline;
+            /* Metni satır içi element olarak hizalama */
+            border: 1px solid grey;
+        }
+
+        span {
+            display: block;
+            /* Metni blok element olarak hizalama */
+            border: 1px solid green;
+        }
+
+        .c6 { /* Metni dikeyde merkezde hizalama */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 300px; /* Yükseklik değerini belirtmek önemlidir */
+            width: 800px;
+            border: 1px solid black;
+        }
+
+        .c7 {
+            background-color: lightgoldenrodyellow;
+            height: 24px;
+            width: 100%;
+            line-height: 1.6;
+            overflow: hidden; /* İçeriğin görünmesini engelleme */
+            white-space: nowrap; /* Metinlerin satır sonunda kesilmesini önleme */
+            text-overflow: ellipsis; /* Metni ... ile gösterme (eğer içeriğin tamamı görüntülenmiyorsa) */
+        }
+
+        .c8 mark {
+            vertical-align: super;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Text Sizing and Alingment</h1>
+    <h2>Text Sizes</h2>
+    <p class="c1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus in enim asperiores!</p>
+    <p class="c2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    <p class="c3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem inventore ex culpa repudiandae velit.
+    </p>
+    <h2>Text Alingment</h2>
+    <p class="c4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia optio hic amet! Voluptate sunt placeat repellendus tempora iste excepturi ratione natus ipsum dolorum, voluptatem, praesentium harum corrupti fugiat. Aut consectetur incidunt nemo eos modi aspernatur adipisci laudantium suscipit nobis voluptatem cupiditate distinctio quisquam tempora, esse corrupti sequi fuga dolore dolor!</p>
+    <div class="c5">
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <span>lorem block</span>
+    </div>
+    <h2>Metni dikeyde merkeze hizalama</h2>
+    <p class="c6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, minus. Iusto perferendis aut beatae impedit aliquid.</p>
+    <h2>text-overflow & white-space</h2>
+    <p class="c7"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus neque natus architecto consequuntur dignissimos alias. Reiciendis dicta perferendis at ipsa obcaecati quis, quo doloribus? Tempore error laboriosam quidem veritatis similique voluptas nisi, aperiam autem sint eveniet vel porro nostrum obcaecati, repellat, explicabo corporis repudiandae! Magni neque pariatur rerum est iure officiis accusamus libero esse, nobis molestias tenetur, ipsa quo facilis ratione ex quasi beatae ut odit debitis. Mollitia facilis modi laborum nulla fugit eveniet sit amet, quam nesciunt dolor id dolores deserunt ratione assumenda, nobis consectetur ducimus cumque molestiae accusamus dicta quia corporis eius minus nemo. Repellendus nostrum illo debitis voluptate, corporis natus at, adipisci aliquam cumque fugiat quia doloremque, culpa omnis consectetur animi vel veritatis iusto ullam beatae porro voluptatem! Laudantium laborum illum nihil possimus nesciunt et libero nam suscipit deserunt, neque tempore, facere perferendis eum quos dignissimos. Dolor quasi veritatis at ea molestiae magni! Consectetur inventore porro harum pariatur error architecto voluptatibus a labore. Rerum fuga delectus maxime, repudiandae hic laborum cum debitis earum sint dolore ab provident optio, dignissimos sed iste ut voluptas commodi in laboriosam? Quam, facere voluptate quis rem iure blanditiis harum nulla optio officiis aperiam porro quas quae? Libero consectetur nesciunt numquam repudiandae dolorum.</p>
+    <h2>vertical-align</h2>
+    <p class="c8">Lorem ipsum dolor sit amet consectetur adipisicing elit. <mark>Nemo delectus quidem vero,</mark> architecto optio nobis, enim commodi cumque, aliquid repellat rem itaque rerum? Nihil numquam debitis neque dolorum in doloremque.</p>
+
+</body>
+
+</html>
