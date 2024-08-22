@@ -1,95 +1,128 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Tables</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Tables</title>
+  <style>
+    table {
+      min-width: 600px;
+      border: 1px solid black;
+      padding: 12px 4px 12px 4px;
+      border-collapse: collapse;
+    }
+
+    caption {
+      padding-bottom: 8px;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+    }
+
+    th {
+      padding: 16px 16px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    td {
+      padding: 8px 4px;
+      font-weight: 500;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>HTML Tables</h1>
+  <h1>HTML Tables</h1>
 
-    <table style="border: 1px solid black; border-radius: 4px; padding: 12px 4px 12px 4px;">
-        <caption style="padding: 16px 0px 4px 12px;text-align: left; font-size: 20px; font-weight: 700;">Table Example</caption>
-        <colgroup>
-             <col span="2" style="background-color:#eed6d8;">
-             <col style="background-color: lightgreen;">
-        </colgroup>
-        <thead style="border: 1px solid black;">
-            <tr style="border: 1px; border-color: black; border-radius: 4px;">
-                <th style="padding: 8px;">Pazartesi</th>
-                <th style="padding: 8px;">Salı</th>
-                <th style="padding: 8px;">Çarşamba</th>
-                <th style="padding: 8px;">Perşembe</th>
-                <th style="padding: 8px;">Cuma</th>
-                <th style="padding: 8px;">Cumartesi</th>
-                <th style="padding: 8px;">Pazar</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td colspan="2" rowspan="3" style="padding: 8px;">1</td>
-                <td style="padding: 8px;">3</td>
-                <td style="padding: 8px;">4</td>
-                <td style="padding: 8px;">5</td>
-                <td style="padding: 8px;">6</td>
-                <td style="padding: 8px;">7</td>
-            </tr>
-            <tr>
-                <td style="padding: 8px;">8</td>
-                <td style="padding: 8px;">9</td>
-                <td style="padding: 8px;">10</td>
-                <td style="padding: 8px;">11</td>
-                <td style="padding: 8px;">12</td>
-            </tr>
-            <tr>
-                <td style="padding: 8px;">15</td>
-                <td style="padding: 8px;">16</td>
-                <td style="padding: 8px;">17</td>
-                <td style="padding: 8px;">18</td>
-                <td style="padding: 8px;">19</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <th colspan="6" style="border-top: 1px solid black; padding: 4px; background-color: lightblue;">Toplam</th>
-                <th style="border-top: 1px solid black;">1000</th>
-            </tr>
-        </tfoot>
-    </table>
+  <table>
+    <caption>Table Example</caption>
+    <colgroup>
+      <col span="2" style="background-color:#eed6d8;">
+      <col style="background-color: lightgreen;">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Pazartesi</th>
+        <th>Salı</th>
+        <th>Çarşamba</th>
+        <th>Perşembe</th>
+        <th>Cuma</th>
+        <th>Cumartesi</th>
+        <th>Pazar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2" rowspan="3">1</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th colspan="6">Toplam</th>
+        <th>1000</th>
+      </tr>
+    </tfoot>
+  </table>
 
-    <br><br><br>
+  <br><br><br>
 
-    <h2>Tablo örneği</h2>
-    <table style="width:100%; border: 1px solid black;">
-        <tr>
-          <th style="border: 1px solid black; padding: 15px; text-align: left;">İsim</th>
-          <th style="border: 1px solid black; padding: 15px; text-align: left;">Soyisim</th>
-        </tr>
-        <tr>
-          <td style="border: 1px solid black; padding: 15px; text-align: left;">Ahmet</td>
-          <td style="border: 1px solid black; padding: 15px; text-align: left;">Kaya</td>
-        </tr>
-        <tr>
-          <td style="padding: 15px; text-align: left;">Mehmet</td>
-          <td style="border: 1px solid black; padding: 15px; text-align: left;">Yılmaz</td>
-        </tr>
-    </table>
+  <h2>Tablo örneği</h2>
+  <table>
+    <tr>
+      <th style="border: 1px solid black; padding: 15px; text-align: left;">İsim</th>
+      <th style="border: 1px solid black; padding: 15px; text-align: left;">Soyisim</th>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 15px; text-align: left;">Ahmet</td>
+      <td style="border: 1px solid black; padding: 15px; text-align: left;">Kaya</td>
+    </tr>
+    <tr>
+      <td style="padding: 15px; text-align: left;">Mehmet</td>
+      <td style="border: 1px solid black; padding: 15px; text-align: left;">Yılmaz</td>
+    </tr>
+  </table>
 
-    <br><br><br>
-    <h2>İç içe tablo örneği</h2>
-    <table border="1">
-            <tr>
-              <td>
-                <table border="2">
-                  <tr>
-                    <td>İç Tablo Hücresi 1</td>
-                    <td>İç Tablo Hücresi 2</td>
-                  </tr>
-                </table>
-              </td>
-              <td>Dış Tablo Hücresi</td>
-        </tr>
-    </table>
-    
+  <br><br><br>
+  <h2>İç içe tablo örneği</h2>
+  <table>
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td>İç Tablo Hücresi 1</td>
+            <td>İç Tablo Hücresi 2</td>
+          </tr>
+        </table>
+      </td>
+      <td>Dış Tablo Hücresi</td>
+    </tr>
+  </table>
+
 </body>
+
 </html>

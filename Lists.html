@@ -4,6 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Lists</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <style>
+        .c1 {
+            list-style-type: square;
+        }
+
+        .c1 ul {
+            list-style-type: disc;
+        }
+
+        .c2 {
+            list-style-type: upper-roman;
+        }
+
+        .c3 {
+            background-color: antiquewhite;
+            list-style-position: inside;
+            padding-left: 16px;
+            list-style-type: circle;
+        }
+
+        .c3 li{
+            background-color: lightpink;
+            margin-bottom: 2px;
+        }
+        
+        .c4 {
+            background-color: lightpink;
+            list-style-position: outside;
+        }
+
+        .c4 li {
+            background-color: antiquewhite;
+        }
+
+        .c5 {
+            padding-left: 0px;
+            list-style-type: none;
+            background-color: lightgreen;
+        }
+
+        .c5 li {
+            background-color: bisque;
+        }
+
+        .c5 li:before { /* Google Icons kullanarak madde işaretini değiştirme*/
+            content: 'check';
+            font-family: 'Material Icons';
+            font-size: 16px;
+            padding-right: 8px;
+            vertical-align: auto;
+        }
+
+    </style>
 </head>
 <body>
     <h1>HTML Lists</h1>
@@ -20,9 +74,27 @@
             <li>Ekşimaya</li>
         </ul>
     </ul>
+    <ul class="c1">
+        <li>Elma</li>
+        <li>Süt</li>
+        <li>Yumurta</li>
+        <li>Ekmek</li>
+        <ul>
+            <li>Tambuğday</li>
+            <li>Beyaz</li>
+            <li>Ekşimaya</li>
+        </ul>
+    </ul>
 
     <h2>Ordered List</h2>
-    <ol style="list-style-type:circle;">
+    <ol>
+        <li>Kalkış</li>
+        <li>Kahvaltı</li>
+        <li>Mail kontrolü</li>
+        <li>Daily Toplantısı</li>
+        <li>Kahve arası</li>
+    </ol>
+    <ol class="c2">
         <li>Kalkış</li>
         <li>Kahvaltı</li>
         <li>Mail kontrolü</li>
@@ -39,5 +111,27 @@
         <dt>JS</dt>
         <dd>Java Script</dd>
     </dl>
+
+    <h2>CSS Lists</h2>
+    <h3>list-style-position</h3>
+    <ul class="c3">
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Alias repellat maiores unde eum!</li>
+        <li>Rerum veniam aut a in?</li>
+        <li>Ea totam tenetur maxime at!</li>
+    </ul>
+    <ol class="c4">
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Quis excepturi odit voluptas!</li>
+        <li>At magnam facere molestias.</li>
+        <li>Eius commodi consequatur natus.</li>
+    </ol>
+    <h3>Madde işaretini google icons kullanarak değiştirme</h3>
+    <ul class="c5">
+        <li>Lorem, ipsum dolor.</li>
+        <li>Provident, sunt. Dolores.</li>
+        <li>Nostrum, consequuntur amet?</li>
+        <li>Vero, autem tenetur?</li>
+    </ul>
 </body>
 </html>

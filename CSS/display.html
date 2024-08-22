@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display</title>
+    <style>
+        .display {
+            background-color: aqua;
+        }
+
+        .inline {
+            display: inline;
+            /*satır içi öğe olarak tanımlıyor. Width height gibi özellikler kullanılamıyor*/
+        }
+
+        .inline-block {
+            display: inline-block;
+            /* block ve inline bir arada gibi hem satır içi öğe olarak tanımlanıyor hem de width height gibi özellikler alabiliyor. width: auto; gibi davranıyor default olarak*/
+        }
+
+        .block {
+            display: block;
+            /*Block öğesi olarak tanımlıyor. width: 100%; gibi davranıyor default olarak.*/
+        }
+
+        .none {
+            display: none;
+            /* öğeyi tamamen yok sayıyor*/
+        }
+
+        .hidden {
+            visibility: hidden;
+            /*öğeyi gizliyor ma kapladığı yer belli oluyor.*/
+        }
+
+        .flex {
+            max-width: 600px;
+            background-color: lightcoral;
+            display: flex;
+            gap: 16px;
+            padding: 24px;
+        }
+
+        .flex div {
+            background-color: white;
+            width: 72px;
+            font-size: 32px;
+            line-height: 72px;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            gap: 10px;
+            padding: 10px;
+            background-color: blueviolet;
+        }
+
+        .grid div {
+            font-size: 32px;
+            line-height: 72px;
+            text-align: center;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Display</h1>
+    <h2>display:inline;</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="display inline">Earum adipisci consequuntur inventore</span> esse repudiandae neque nisi iure commodi quisquam maxime! Sint nulla temporibus repellendus, nobis excepturi laborum nesciunt a harum!</p>
+    <h2>display:inline-blok;</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="display inline-block">Earum adipisci consequuntur inventore</span> esse repudiandae neque nisi iure commodi quisquam maxime! Sint nulla
+        temporibus repellendus, nobis excepturi laborum nesciunt a harum!</p>
+    <h2>display:block;</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="display block">Earum adipisci consequuntur inventore</span> esse repudiandae neque nisi iure commodi quisquam maxime! Sint nulla temporibus repellendus, nobis excepturi laborum nesciunt a harum!</p>
+    <h2>display:none;</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="display none">Earum adipisci consequuntur inventore</span> esse repudiandae neque nisi iure commodi quisquam maxime! Sint nulla temporibus repellendus, nobis excepturi laborum nesciunt a harum!</p>
+    <h2>visibility:hidden;</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="display hidden">Earum adipisci consequuntur inventore</span> esse repudiandae neque nisi iure commodi quisquam maxime! Sint nulla temporibus repellendus, nobis excepturi laborum nesciunt a harum!</p>
+    <h2>display:flex;</h2>
+    <h3>Container</h3>
+    <div class="flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h3>The flex direction property</h3>
+    <div class="flex" style="flex-direction: row; flex-wrap: wrap;">
+        <!--flex-direction ile column veya row seçerek itemleri satıra veya sütuna göre sıralıyor flex-wrap özelliği ile satıra sığmayan öğeleri alt satıra geçiriyor-->
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+    <h3>The justify-content property</h3> <!--İçeriği yatayda hizalama default hali strecth-->
+    <div class="flex" style="justify-content: center;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h3>The align-content property</h3> <!--İçeriği dikeyde hizalama default hali strecth-->
+    <div class="flex" style=" flex-wrap: wrap; height:200px; align-content: center;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+    <h3>The align-items property</h3> <!--Elemanları dikeyde hizalama default hali strecth-->
+    <div class="flex" style="height: 200px; align-items: center;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h3>The order property</h3> <!--sıralama değiştirme-->
+    <div class="flex">
+        <div style="order: 2;">1</div>
+        <div style="order: 1;">2</div>
+        <div style="order: 3;">3</div>
+        <div style="order: 4;">4</div>
+    </div>
+    <h3>The flex-grow property</h3>
+    <!--flex-grow:1 verilen item genişlerken diğerleri genişliğini korur. başka bir iteme 2 verirsen 2 verilen item daha çok genişler-->
+    <div class="flex">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-grow: 1 ;">3</div>
+        <div>4</div>
+    </div>
+    <h3>The flex-shrink property</h3>
+    <!--flex-shrink:0 verilen item genişliğini korurken diğerleri daralır. Default değeri 1 dir.-->
+    <div class="flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div style="flex-shrink: 0;">4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+    <h3>The flex-basis property</h3>
+    <!--Eleman uzunluğu flex-direction a göre değişiyor. Yani kolon şeklindeyse yüksekliği satır şeklindeyse genişliği değişiyor.-->
+    <div class="flex">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-basis: 200px;">3</div>
+        <div>4</div>
+    </div>
+    <h3>The align-self property</h3> <!--Elemanın kendisini hizalamayı sağlıyor-->
+    <div class="flex" style="flex-wrap: wrap; height: 200px;">
+        <div>1</div>
+        <div>2</div>
+        <div style="align-self: end;">3</div>
+        <div>4</div>
+    </div>
+
+    <h2>display:grid;</h2>
+    <h3>Conteiner</h3>
+    <div class="grid"> <!--Default-->
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h3>The grid-template-columns property</h3>
+    <div class="grid" style="grid-template-columns: auto auto auto;"> <!--girilen değer kadar kolon oluşturuyor-->
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+    <h3>The grid-template-rows property</h3>
+    <div class="grid" style="grid-template-columns: auto auto 100px; grid-template-rows: auto auto 100px;">
+        <!--girilen değer kadar satır oluşturuyor-->
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+    <h3>The justify-content porperty</h3>
+    <div class="grid" style="justify-content: center; grid-template-columns: 100px 100px 100px;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h3>The align-content porperty</h3>
+    <div class="grid" style="height:200px; align-content: space-between; grid-template-columns: auto auto auto;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <h3>The grid-column porperty</h3>
+    <div class="grid" style="grid-template-columns: auto auto auto;">
+        <div style="grid-column: 1 / 3;">1</div>
+        <!--grid-column: 1 / 3 : 3. kolona kadar (3.kolon hariç) kolonları birleştir. (colspan'a benziyor) karıştırmamak için istersen grid-column:1 / span 2 olarak da yazabilirsin 1. ve 2. kolonu birleştirir.-->
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <h3>The grid-row porperty</h3>
+    <div class="grid" style="grid-template-columns: auto auto auto;">
+        <div style="grid-row: 1 / 3;">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+
+</body>
+
+</html>
