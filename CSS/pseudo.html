@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo</title>
+    <style>
+        a:hover {
+            color: violet;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        input:disabled {
+            background-color: lightgrey !important; /* burada !important yazdığım için ne olursa olsun önceliği bu koda verdi ve input disabled gri oldu. Eğer important vermeseydim ":not" selektörü .name classına sahip olmayan tüm inputları kırmızıya çevirirdi.*/
+        }
+
+        input:not(.name) {
+            background-color: red;
+        }
+
+        /*2 ve 2'nin katları olan elemanları seçer ve CSS kodlarını onlara uygular*/
+        li:nth-child(2n) { 
+            background-color: aquamarine;
+        }
+
+        .c1::first-line {
+            color: orange;
+        }
+
+        .c2::before,
+        .c2::After {
+            content: '';
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            background-color: blue;
+            border-radius: 10px;
+        }
+
+        .c2::before {
+            margin-right: 8px;
+        }
+
+        .c2::After {
+            margin-left: 8px;
+        }
+
+        ::selection { /*global bi selektör bütün içeriğe etki eder.*/
+            background-color: coral;
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>CSS Pseudo</h1>
+    <h2>CSS Pseudo-class</h2>
+    <h3>:active</h3>
+    <p><a href="#">Bağlantıya tıkla</a></p>
+    <h3>:hover</h3>
+    <p><a href="#">Bağlantının üzerine gel</a></p>
+    <h3>:disabled</h3>
+    <input type="text" disabled>
+    <h3>:not (selector)</h3>
+    <input type="text" class="name">
+    <h3>:nth-child(n)</h3>
+    <ul>
+        <li>İzmir</li>
+        <li>İstanbul</li>
+        <li>Ankara</li>
+        <li>Konya</li>
+        <li>Antalya</li>
+    </ul>
+    <h2>CSS Pseudo-elements</h2>
+    <h3>::first-line</h3>
+    <p class="c1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptatibus similique sed, omnis ex provident? Nisi repudiandae ea consequatur hic dolor velit corporis? Ullam commodi fugiat libero, ad neque sit laborum eaque iure veniam provident? Maxime, corporis facilis accusantium ullam culpa maiores dicta nulla sequi dignissimos autem in, aliquam aliquid minus eos, temporibus molestiae voluptates aspernatur reiciendis rerum! Enim consequuntur consectetur dolorem eaque unde eius tempora nulla, labore cum velit est, a qui vitae minima quidem ut quibusdam delectus fugit cumque dignissimos quis aut iste. Veniam ab quis quas nulla? Odio fuga autem odit voluptas sed obcaecati rerum incidunt perspiciatis?</p>
+    <h3>::before, ::after</h3>
+    <p class="c2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quisquam doloribus quidem aspernatur, praesentium saepe natus sed reprehenderit tempora magni temporibus dolores earum nisi, distinctio, corrupti explicabo at provident beatae?</p>
+    <h3>::selection</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, magnam numquam. Amet, mollitia sunt magni saepe quas labore eum expedita aperiam sapiente iste ducimus. At error fugiat dolor ad? Dolores.</p>
+</body>
+</html>
