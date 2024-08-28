@@ -22,6 +22,8 @@ Grid sistemi, üç ana öğeye dayanır:
 
 Üç eşit sütun örneği
 
+```bg-success```, ```bg-danger```,```bg-primary``` gibi sınıflar Bootstrap'ın hazır renk sınıflarıdır. Ve içerikleri vurgulamak için kullanılır. 
+
 ```html
 <div class="container">
     <div class="row">
@@ -99,9 +101,9 @@ Kırılma noktaları, farklı ekran boyutları için farklı düzenler tanımlam
 
 ### Aynı kırılma noktasında eşit genişlikteki sütunlar
 
+- md kırılma noktasında 3 eşit sütun örneği.
+- md boyutuna gelene kadar 12 kolon alan kaplar ve alt alta gelirler.
 ```html 
-<!--md kırılma noktasında 3 eşit sütun örneği.
-    md boyutuna gelene kadar 12 kolon alan kaplar ve alt alta gelirler.-->
 <div class="container">
     <div class="row">
         <div class="col-md-4 bg-success">
@@ -119,12 +121,14 @@ Kırılma noktaları, farklı ekran boyutları için farklı düzenler tanımlam
 ---
 
 ### Farklı kırılma noktalarında eşit genişlikteki sütunlar
+
+Oluşturulan her eşit sütun için:
+- sm ve daha küçük ekranda 6 kolonluk alan kaplar
+- md classı tanımlanmadığı için sm'dan lg'ye kadar 6 kolonluk alan kaplar.
+- lg ekranlarda 3 kolonluk alan kaplar
+- xl ekranlarda 2 kolonluk alan kaplar
 ```html
-<!--Oluşturulan her eşit sütun için:
-    sm ve daha küçük ekranda 6 kolonluk alan kaplar
-    md classı tanımlanmadığı için sm'dan lg'ye kadar 6 kolonluk alan kaplar.
-    lg ekranlarda 3 kolonluk alan kaplar
-    xl ekranlarda 2 kolonluk alan kaplar-->
+
 <div class="container">
     <div class="row">
         <div class="col-sm-6 col-lg-3 col-xl-2 bg-primary">
