@@ -40,7 +40,7 @@ Grid sistemi, üç ana öğeye dayanır:
 
 ## Satırlar ve Sütunlar
 **.row sınıfı** sütunları içinde barındıran satırı tanımlar.
-**-.col sınıfı** bir sütunu temsil eder ve otomatik olarak eşit genişlikte dağıtılır.
+**.col sınıfı** bir sütunu temsil eder ve otomatik olarak eşit genişlikte dağıtılır.
 
 Sütunlar, .col- ile başlayıp ardından bir sayı (1-12) eklenerek genişletilebilir.
 
