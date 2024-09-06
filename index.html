@@ -1,61 +1,89 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pages</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Pages</h1>
-    <ul>
-        <li><a href="./attributes.html">Attributes</a></li>
-        <li><a href="./faviocon.html">Favicon</a></li>
-        <li><a href="./formexample.html">Form Example</a></li>
-        <li><a href="./forms.html">Forms</a></li>
-        <li><a href="./headings.html">Headings</a></li>
-        <li><a href="./iframe.html">Iframe</a></li>
-        <li><a href="./Images.html">Images</a></li>
-        <li><a href="./links.html">Links</a></li>
-        <li><a href="./Lists.html">Lists</a></li>
-        <li><a href="./paragraphs.html">Paragraphs</a></li>
-        <li><a href="./semanticelements.html">Semantic Elements</a></li>
-        <li><a href="./tables.html">Tables</a></li>
-        <li><a href="./textformatting.html">Text Formatting</a></li>
-        <li><a href="./thankyou.html">Thank You Message</a></li>
-    </ul>
-    <h3>CSS</h3>
-    <ul>
-        <li><a href="../Practices/CSS/selectors.html">CSS Selectors</a></li>
-        <li><a href="../Practices/CSS/background.html">CSS Background</a></li>
-        <li><a href="../Practices/CSS/border.html">CSS Border</a></li>
-        <li><a href="../Practices/CSS/margins.html">CSS Margins</a></li>
-        <li><a href="../Practices/CSS/padding.html">CSS Padding</a></li>
-        <li><a href="../Practices/CSS/sizes.html">CSS Sizes</a></li>
-        <li><a href="../Practices/CSS/texts.html">CSS Text Sizing and Alingment </a></li>
-        <li><a href="../Practices/CSS/otline.html">CSS Outline</a></li>
-        <li><a href="../Practices/CSS/fonts.html">CSS Fonts</a></li>
-        <li><a href="../Practices/CSS/icons.html">CSS Icons</a></li>
-        <li><a href="../Practices/CSS/display.html">CSS Display</a></li>
-        <li><a href="../Practices/CSS/positions.html">CSS Layout: The position Property</a></li>
-        <li><a href="../Practices/CSS/z-index.html">CSS Layout: The z-index Property</a></li>
-        <li><a href="../Practices/CSS/overflow.html">CSS Layout: The overflow Property</a></li>
-        <li><a href="../Practices/CSS/pseudo.html">CSS Pseudo</a></li>
-        <li><a href="../Practices/CSS/opacitiy.html">CSS Opacity</a></li>
-        <li><a href="../Practices/CSS/shadows.html">CSS Shadows</a></li>
-        <li><a href="../Practices/CSS/functions.html">CSS Functions</a></li>
-        <li><a href="../Practices/CSS/transforms.html">CSS Transforms</a></li>
-    </ul>
-    <h3>Layout Practice</h3>
-    <ul>
-        <li><a href="../Practices/Layout/index.html">Responsive Layout</a></li>
-    </ul>
-    <h3>Tailwind CSS</h3>
-    <ul>
-        <li><a href="./tailwindcss/colors.html">Tailwind Colors</a></li>
-        <li><a href="./tailwindcss/box-shadows.html">Tailwind Box Shadows</a></li>
-        <li><a href="./tailwindcss/grid.html">Tailwind Grid</a></li>
-        <li><a href="./tailwindcss/flex.html">Tailwind Flex</a></li>
-    </ul>
-    
+
+<body class="bg-gray-50 dark:bg-gray-950">
+    <main class="container mx-auto p-6">
+        <h1 class="text-4xl font-bold text-gray-950 mb-6">Pages</h1>
+        <div class="flex gap-x-4">
+            <div class="flex-auto">
+                <h3 class="text-2xl font-bold text-gray-950 mb-6 px-4 dark:text-gray-50">HTML</h3>
+                <nav class="flex flex-col">
+                    <a href="./attributes.html">HTML Attributes</a>
+                    <a href="./faviocon.html">HTML Favicon</a>
+                    <a href="./formexample.html">HTML Form Example</a>
+                    <a href="./forms.html">HTML Forms</a>
+                    <a href="./headings.html">HTML Headings</a>
+                    <a href="./iframe.html">HTML Iframe</a>
+                    <a href="./Images.html">HTML Images</a>
+                    <a href="./links.html">HTML Links</a>
+                    <a href="./Lists.html">HTML Lists</a>
+                    <a href="./paragraphs.html">HTML Paragraphs</a>
+                    <a href="./semanticelements.html">HTML Semantic Elements</a>
+                    <a href="./tables.html">HTML Tables</a>
+                    <a href="./textformatting.html">HTML Text Formatting</a>
+                    <a href="./thankyou.html">Thank You Message</a>
+                </nav>
+            </div>
+            <div class="flex-auto">
+                <h3 class="text-2xl font-bold text-gray-950 mb-6 px-4 dark:text-gray-50">CSS</h3>
+                <nav class="flex flex-col">
+                        <a href="../Practices/CSS/selectors.html">CSS Selectors</a>
+                        <a href="../Practices/CSS/background.html">CSS Background</a>
+                        <a href="../Practices/CSS/border.html">CSS Border</a>
+                        <a href="../Practices/CSS/margins.html">CSS Margins</a>
+                        <a href="../Practices/CSS/padding.html">CSS Padding</a>
+                        <a href="../Practices/CSS/sizes.html">CSS Sizes</a>
+                        <a href="../Practices/CSS/texts.html">CSS Text Sizing and Alingment </a>
+                        <a href="../Practices/CSS/otline.html">CSS Outline</a>
+                        <a href="../Practices/CSS/fonts.html">CSS Fonts</a>
+                        <a href="../Practices/CSS/icons.html">CSS Icons</a>
+                        <a href="../Practices/CSS/display.html">CSS Display</a>
+                        <a href="../Practices/CSS/positions.html">CSS Layout: The position Property</a>
+                        <a href="../Practices/CSS/z-index.html">CSS Layout: The z-index Property</a>
+                        <a href="../Practices/CSS/overflow.html">CSS Layout: The overflow Property</a>
+                        <a href="../Practices/CSS/pseudo.html">CSS Pseudo</a>
+                        <a href="../Practices/CSS/opacitiy.html">CSS Opacity</a>
+                        <a href="../Practices/CSS/shadows.html">CSS Shadows</a>
+                        <a href="../Practices/CSS/functions.html">CSS Functions</a>
+                        <a href="../Practices/CSS/transforms.html">CSS Transforms</a>
+                </nav>
+            </div>
+
+            <div class="flex-auto">
+                <h3 class="text-2xl font-bold text-gray-950 mb-6 px-4 dark:text-gray-50">Layout Practices</h3>
+                <nav class="flex flex-col">
+                    <a href="../Practices/Layout/index.html">Responsive Layout</a>
+                </nav>
+            </div>
+
+            <div class="flex-auto">
+                <h3 class="text-2xl font-bold text-gray-950 mb-6 px-4 dark:text-gray-50">Tailwind CSS</h3>
+                <nav class="flex flex-col">
+                    <a href="./tailwindcss/colors.html">Tailwind Colors</a>
+                    <a href="./tailwindcss/box-shadows.html">Tailwind Box Shadows</a>
+                    <a href="./tailwindcss/grid.html">Tailwind Grid</a>
+                    <a href="./tailwindcss/flex.html">Tailwind Flex</a>
+                    <a href="./tailwindcss/typography.html">Tailwind Typography</a>
+                    <a href="./tailwindcss/pseudo.html">Tailwind Pseudo</a>
+                    <a href="./tailwindcss/responsive-design.html">Tailwind Responsive Design</a>
+                </nav>
+            </div>
+        </div>
+    </main>
+    <script>
+        var links = document.querySelectorAll('nav > a')
+
+        for (var link of links) {
+            link.classList = 'px-4 py-2 rounded text-sm text-gray-600 hover:text-gray-200 hover:bg-gray-950 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800';
+        }
+    </script>
 </body>
+
 </html>
