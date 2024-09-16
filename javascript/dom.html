@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM</title>
+</head>
+<body>
+    <H1>JavaScript DOM</H1>
+    <ul>
+        <li id="html" class="course">HTML</li>
+        <li id="css" class="course">CSS</li>
+        <li id="js" class="course">JavaScript</li>
+        <li id="tailwind" class="course">Tailwind CSS</li>
+    </ul>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate fugit beatae magni ad corrupti nemo eos nulla possimus, dicta sequi, totam vel perspiciatis ipsum deleniti autem facere nesciunt reprehenderit sit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium debitis doloremque minima nobis sequi fuga. Dicta pariatur repellat possimus veniam nisi exercitationem, ut enim, rerum doloribus explicabo laborum veritatis ab.</p>
+    <script>
+        console.log(document);
+        console.log(document.body);
+        console.log(document.head);
+        console.log(document.documentElement)
+
+        var body = document.body;
+        body.dataset.uuid = '#123';
+        body.setAttribute('id', 'custom-id');
+        body.classList.add('custom-class1', 'second-class'); //istediğin kadar class eklersin
+
+        setTimeout(() => {
+            body.style.backgroundColor = 'orange'
+        }, 2000)
+
+        //id ile seçme (id bir tane olduğu için tekil 'Element' olarak yazılır.)
+        var elementById = document.getElementById('html')
+        console.groupCollapsed('getElementById()')
+        console.log(elementById)
+        console.dir(elementById)
+        console.groupEnd()
+
+        //class name ile seçme
+        var elementByClassName = document.getElementsByClassName('course')
+        console.groupCollapsed('getElementByClassName()')
+        console.log(elementByClassName)
+        console.dir(elementByClassName)
+        console.groupEnd()
+
+        //etiket ismiyle seçme
+        var elementByTagName = document.getElementsByTagName('p')
+        console.groupCollapsed('getElementByClassName()')
+        console.log(elementByTagName)
+        console.dir(elementByTagName)
+        console.groupEnd()
+
+        //css seçicisine benzer çalışır id için '#' class için '.' koymak gerekiyor. Class seçerken aynı calsstan bir çok element varsa ilk bulduğunu seçer.
+        var querySelector = document.querySelector('#html')
+        console.groupCollapsed('querySelector()')
+        console.log(querySelector)
+        console.dir(querySelector)
+        console.groupEnd()
+
+        //querySelectorAll aynı classtaki bütün elemanları seçer
+        var querySelectorAll = document.querySelectorAll('ul > .course')
+        console.groupCollapsed('querySelectorAll()')
+        console.log(querySelectorAll)
+        console.dir(querySelectorAll)
+        console.groupEnd()
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+</head>
+
+<body>
+    <h1>JavaScript Functions</h1>
+    <script>
+        //tax calculation
+        function vat(price, rate = 20) {
+            if (typeof price !== 'number') {
+                throw 'Please enter a number.';
+            }
+            else if (price <= 0) {
+                throw ('Please enter a positive number.')
+            }
+
+            const tax = price / 100 * rate;
+            const amount = price + tax;
+
+            return amount;
+        }
+
+        const price = 200;
+        const amount = vat(price);
+        const tax = amount - price;
+        const phone = vat(price, 100);
+
+        console.log('Price', price);
+        console.log('Tax', tax);
+        console.log('Amount', amount);
+        console.log('Phone', phone);
+
+        //examples
+
+        // Fonksiyon Deklarasyonu
+        function add(a, b) {
+            return a + b;
+        }
+        console.log(add(2, 3)); // 5
+
+        // Fonksiyon İfadesi
+        let multiply = function (a, b) {
+            return a * b;
+        };
+        console.log(multiply(2, 3)); // 6
+
+        // Arrow Fonksiyonu
+        let subtract = (a, b) => {
+            return a - b;
+        };
+        console.log(subtract(5, 3)); // 2
+
+        //üs alma örneği
+        function power(a,b) {
+            if (typeof a !== 'number') {
+                throw 'Please enter a number';
+            };
+
+            if (typeof b !== 'number') {
+                throw 'Please enter a number'
+            }
+
+            const result = a ** b ;
+
+            return result;
+        }
+
+        console.log(power(3, 3))
+
+        //Another arrow function example
+
+        let division = (x, y) => {
+            return x / y;
+        }
+        console.log(division(12, 4))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript BOM</title>
+</head>
+<body>
+    <h1>JavaScript BOM</h1>
+
+    <h2>Pratikler</h2>
+    <div id="paragraph">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit reiciendis voluptates, asperiores dolores numquam maiores ducimus quae facilis dignissimos molestiae nostrum deleniti corporis, eaque, maxime mollitia. Facilis odit soluta distinctio.</p>
+    </div>
+
+    <button id="btn" type="button" style="padding: 16px 16px; text-align: center; background-color: orange; margin-top: 4rem; cursor: pointer;">Send</button>
+    <script>
+        console.log(window)
+        console.groupCollapsed('Window Screen')// her seferinde (window.screen)yazmaya gerek yok
+        console.log(screen)
+        console.log('screen.width', screen.width);
+        console.log('screen.height', screen.height);
+        console.groupEnd();
+
+        console.groupCollapsed('Window Location');
+        console.log(location);
+        console.log('location.origin', location.origin);
+        console.log('location.pathname', location.pathname);
+        console.log('location.href', location.href);
+        console.groupEnd();
+
+        console.groupCollapsed('Window Navigator');
+        console.log(navigator);
+        console.log('navigator.userAgent', navigator.userAgent);
+        console.log('navigator.vendor', navigator.vendor);
+        console.groupEnd();
+
+        //JavaScript Timing Event
+        setTimeout(function() {
+            console.log('setTimeout');
+        },1000);
+
+        var count = 0;
+        var interval = setInterval(function () {
+            if (count === 5) {
+                clearInterval(interval);
+            } else {
+                count++;
+                console.log('setInterval', count);
+            }
+        }, 1000)
+
+        //pratikler
+
+        var paragraph = document.getElementById('paragraph');
+        paragraph.innerHTML = "Yeni içerik"
+        console.log('yeni-icerik', paragraph);
+
+        document.getElementById("btn").addEventListener("click", function() {
+            alert("Butona tıklandı!");
+        })
+        
+
+    </script>
+    
+</body>
+</html>
