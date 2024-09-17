@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Loops</title>
+</head>
+<body>
+    <h1>JavaScript Loops</h1>
+    <script>
+        //for loop
+        for (let i = 0; i < 5; i++) {
+            if (i === 2) {
+                break;
+            }
+            console.log('for', i);
+        }
+
+        //For...In loop js
+        const person = {
+            name: 'John',
+            age: 28,
+            city: 'New York',
+        }
+
+        for (const key in person) {
+            if (key === 'age') {
+                continue;
+            }
+            const value = person[key];
+            console.log('for...in', key, value);
+        }
+
+        //For...of Loop (js arrayleri için)
+
+        const fruits = [
+            'apple',
+            'banana',
+            'chery',
+        ];
+        
+        for (const fruit of fruits) {
+            console.log('for...of', fruit);
+        }
+
+        //while loop
+        let count = 0;
+
+        while (count < 5) {
+            console.log('while', count);
+            count++;
+        }
+
+        //do while loop
+        let count2 = 5;
+        do {
+            console.log('do...while', count2)
+            count2--;
+        } while (count2);
+
+        //denemeler
+
+        console.group('Denemeler');
+
+        for(let i = 1; i <=10; i++)
+        console.log('for deneme', i)
+
+        let x = 10;
+        while (x > 0) {
+            console.log('while deneme', x);
+            x--;
+        }
+
+        let y = 3;
+
+        do {
+            console.log('do...while deneme', y);
+            y++;
+        } while (y <= 8);
+
+
+        console.groupEnd();
+        
+    </script>
+    
+</body>
+</html>

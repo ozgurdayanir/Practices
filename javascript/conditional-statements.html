@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Conditional Statements</title>
+</head>
+
+<body>
+    <h1>JavaScript Conditional Statements</h1>
+    <script>
+        // Comparison Operators
+
+        const age = 17;
+        console.group('Comparison Operators');
+        console.log(age > 18 ? 'Değer büyüktür.' : 'Değer büyük değildir.');
+        console.log(age < 18 ? 'Değer küçüktür.' : 'Değer küçük değildir.');
+        console.log(age == '18' ? 'Değer eşittir.' : 'Değer eşit değildir.');
+        console.log(age === '18' ? 'Değer ve tür eşittir.' : 'Değer ve tür eşit değildir.')
+        console.groupEnd();
+
+        //Logical Operators
+        const visa = true;
+        const permission = true;
+
+        console.group('Logical Operators');
+        if (visa) {
+            if (age >= 18 || permission) {
+                console.log("Türkiye'ye hoşgeldiniz.")
+            } else {
+                console.log("Ebeveyn izni olmadan Türkeye'ye giriş yapamazsınız.")
+            }
+        } else {
+            console.log("Türkiye'ye giremezsiniz.")
+        }
+
+        if (visa && age >= 18 || visa && permission) {
+            console.log("Türkiye'ye hoşgeldiniz");
+        } else if (visa && age < 18 || visa && !permisson) {
+            console.log("Ebeveyn izni olmadan Türkeye'ye giriş yapamazsınız.")
+        } else {
+            console.log("Türkiye'ye giremezsiniz.")
+        }
+
+        console.groupEnd();
+
+        //If statements
+
+        const score = 85;
+
+        if (score >= 90) {
+            console.log('Harf Notu: A');
+        } else if (score >= 80) {
+            console.log('Harf Notu: B');
+        } else if (score >= 70) {
+            console.log('Harf notu: C');
+        } else if (score >= 60) {
+            console.log ('Harf notu: D');
+        } else if (score >= 50) {
+            console.log ('Harf notu: E');
+        } else {
+            console.log('Harf notu: F')
+        }
+
+        //Switch Statements
+
+        const day = 7;
+
+        switch(day) {
+            case 1:
+                console.log('Pazartesi');
+                break;
+            case 2:
+                console.log('Salı');
+                break;
+            case 3:
+                console.log('Çarşamba');
+                break;
+            case 4:
+                console.log('Perşembe');
+                break;
+            case 5:
+                console.log('Cuma');
+                break;
+            case 1:
+                console.log('Cumartesi');
+                break;
+            case 1:
+                console.log('Pazar');
+                break;
+            default:
+                console.log('Geçersiz gün.')
+        }
+
+        switch (day) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                console.log('Hafta İçi');
+                break;
+            case 6:
+            case 7:
+                console.log('Hafta Sonu');
+                break;
+            default:
+                console.log('Geçersiz gün.');
+                break;
+        }
+        // Switch ve If statement ile trafik lambası.
+        const color = 'green';
+
+        if (color === 'red') {
+            console.log('Dur');
+        } else if (color === 'yellow') {
+            console.log('Dikkat');
+        } else if (color === 'green') {
+            console.log('Geç');
+        } else {
+            console.log('Bilinmeyen Renk');
+        }
+
+        switch (color) {
+            case 'red':
+                console.log('Dur');
+                break;
+            case 'yellow':
+                console.log('Dikkat');
+                break;
+            case 'green':
+                console.log('Geç');
+                break;
+            default:
+                console.log('Bilinmeyen Renk')
+        }
+
+        // denemeler
+
+        const age2 = 18;
+
+        if (age2 <= 3) {
+            console.log('Baby');
+        } else if (age2 <=12) {
+            console.log('Child')
+        } else if (age2 <=17) {
+            console.log('Teenager')
+        } else if (age2 > 17) {
+            console.log('Adult')
+        } else {
+            console.log('undefined')
+        }
+    </script>
+</body>
+
+</html>

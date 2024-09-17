@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+</head>
+
+<body>
+    <h1>JavaScript Events</h1>
+    <button id="btn">Click Here</button>
+    <input id="input" type="text" placeholder="write here">
+    <button onclick="handleClear()">Clear Event</button>
+
+    <script>
+        var body = document.body;
+        var btn = document.getElementById('btn');
+        
+
+        function handleKeyUp(event) {
+            console.log('keyup', event);
+        }
+
+        function handleKeyDown(event) {
+            console.log('keydown', event);
+        }
+        //Add Keyboard Event
+        body.addEventListener('keyup', handleKeyUp);
+        body.addEventListener('keydown', handleKeyDown);
+
+        function handleClick(event) {
+            console.log('click', event);
+            //console.log('click', event.target); (buton içinde ikon olsaydı o ikona basıldığında konsolda ikona  basıldığını gösterir)
+            //console.log('click', event.currentTarget);
+        }
+
+        function handleMouseOver(event) {
+            console.log('mouseover', event)
+        }
+
+        function handleMouseOut(event) {
+            console.log('mouseout', event);
+        }
+
+        //add mouse events
+
+        btn.addEventListener('click', handleClick);
+        btn.addEventListener('mouseover', handleMouseOver);
+        btn.addEventListener('mouseout', handleMouseOut);
+
+        function handleInput(event) {
+            console.log('input', event);
+        }
+
+        //add input event
+        input.addEventListener('input', handleInput);
+
+        //clear event butona basıldığında tanımlanan tüm eventleri siler
+        function handleClear() {
+            body.removeEventListener('keyup', handleKeyUp);
+            body.removeEventListener('keydown', handleKeyDown);
+            btn.removeEventListener('click', handleClick);
+            btn.removeEventListener('mouseover', handleMouseOver);
+            btn.removeEventListener('mouseout', handleMouseOut);
+            input.removeEventListener('input', handleInput);
+        }
+    </script>
+</body>
+
+</html>
