@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Strings</title>
+</head>
+<body>
+    <h1>JavaScript Strings</h1>
+    <script>
+        const text1 = "Özgür'ün rüyası.";
+        //const instance = new String("Özgür'ün rüyası");
+        console.log('text1', text1); //text1 i consola yazar
+        console.log('text1.length', text1.length);//text1 deki tüm karakterlerin sayısını verir
+        console.log('text1[0]', text1[0]);//indexi 0 olan öğeyi  döndürür
+        console.log('text1.chartAt(0)', text1.charAt(0));//indexi 0 olan öğeyi döndürür
+        console.log('text1.toUpperCase()', text1.toUpperCase());//tüm harfler büyük yazılır
+        console.log('text1.toLowerCase()', text1.toLowerCase());//tüm harfler küçük
+
+        const text2 = 'Merhaba';
+        const text3 = 'Dünya';
+        console.log('text2.concat()', text2.concat(' ',text3)); //iki tanımlı öğeyi birleştirir
+        console.log('text2.slice()', text2.slice(0, 3)); //text2 için index 0 dan index 3e kadar olanı alır kalanı siler.
+
+        const text4 = '     MERHABA DÜNYA       '
+        console.log('text4.trim()', text4.trim()); //soldaki ve sağdaki boşlukları siler
+        console.log('text4.trimLeft()', text4.trimLeft());
+        console.log('text4.trimRight()', text4.trimRight());
+
+        const text5 = '123';
+        console.log('text5.padStart', text5.padStart(5, '0'))//eğer tanımlanan öğe 5 karakterden azsa onu 5 karaktere 0 ekleyerek tamamlar eklemeyi baştan yapar.
+        console.log('text5.padEnd', text5.padEnd(5, '0'))//eğer tanımlanan öğe 5 karakterden azsa onu 5 karaktere 0 ekleyerek tamamlar eklemeyi baştan yapar.
+
+        //padStart örneği yaptım
+        const day = '4';
+        const month = '8';
+        const year = '2024';
+
+        console.log(day.padStart(2, 0) + '.' + month.padStart(2, 0) + '.' + year);
+
+        const text6 = 'Merhaba Dünya!';
+        console.log('text6.includes()', text6.includes('Dünya'));//dünya kelimesi text6 içinde var mı varsa true yoksa false yazar consola
+        console.log('text6.search()', text6.search('Dünya'));//kelimenin başlangıç indexini bulur
+        console.log('text6.match()', text6.match('Dünya'));//kelimeyi bulup dize halinde verir.
+    </script>
+</body>
+</html>

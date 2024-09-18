@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Forms</title>
+</head>
+<body>
+    <h1>JavaScript Forms</h1>
+    <form id="signin">
+        <input type="text" name="username" placeholder="Kullanıcı Adı">
+        <input type="password" name="password" placeholder="Parola">
+        <button type="submit">Giriş yap</button>
+    </form>
+
+    <script>
+        //Form tanımlama
+        const form = document.getElementById('signin');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            console.log(event);
+            //Veri toplamak için form ögelerini seçme ve verileri toplama
+            //1.yol
+            const usernameElem = form.querySelector('[name="username"]');
+            const passwordElem = form.querySelector('[name="password"]');
+            console.group('querySelector');
+            console.log('username', usernameElem.value)
+            console.log('password', passwordElem.value)
+            console.groupEnd();
+
+            //2.yol FormData methodu
+
+            const data = new FormData(event.currentTarget);
+            const username = data.get('username');
+            const password = data.get('password');
+
+            console.group('FormData');
+            console.log('username', username);
+            console.log('password', password);
+            console.groupEnd();
+
+            //validasyon kısmı
+
+            if (username === '' || password === '') {
+                alert('Kullanıcı adı veya parola boş bırakılamaz!')
+            } else if (username.length < 3) {
+                alert('Kullanıcı adı minimum 3 karakterden oluşmalıdır')
+            } else if (password.length <6) {
+                alert('Parola minimum 6 karakterden oluşmalıdır.')
+            } else {
+                const rawdata = {
+                    username,
+                    password,
+                    authId:'sadjsaaskd',
+                }
+                console.log('request', rawdata);
+            }
+            
+        });
+    </script>
+</body>
+</html>
